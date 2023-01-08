@@ -401,7 +401,7 @@ var options = {
     enabled: false,
   },
   series: [44, 25, 19],
-  labels: ["Social", "Direct", "Others"],
+  labels: ["Source 1", "Source 2", "Source 3"],
   colors: ["#038edc", "#f5f6f8", "#5fd0f3"],
   legend: {
     show: true,
