@@ -1,0 +1,99 @@
+@@include("partials/main.html")
+
+<head>
+
+    @@include("partials/title-meta.html", {"title": "Product Details"})
+
+    <!-- gridjs css -->
+    <link rel="stylesheet" href="assets/libs/gridjs/theme/mermaid.min.css">
+
+    @@include("partials/head-css.html")
+
+</head>
+
+@@include("partials/body.html")
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+
+    @@include("partials/menu.html")
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                @@include("partials/page-title.html", {"pagetitle": "Tables", "title": "Product Tables"})
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header justify-content-between d-flex align-items-center">
+                                <h4 class="card-title">Product Table</h4>
+                                <a href="/add-product.html" class="btn btn-sm btn-soft-secondary">Add Product
+                                    <i class="mdi mdi-arrow-right align-middle"></i></a>
+                            </div><!-- end card header -->
+                            <div class="card-body">
+                                <div id="product-table-gridjs"></div>
+                            </div>
+                            <!-- end card body -->
+                        </div>
+                        <!-- end card -->
+                        <!-- Add New Event MODAL -->
+                        <div class="modal fade" id="viewDetails-modal" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered w-100" style="max-width: 750px;">
+                                <div class="modal-content">
+                                    <div class="modal-header py-3 px-4 border-bottom-0">
+                                        <h5 class="modal-title" id="modal-title">Product ID:
+                                            <span class="text-success">PR-000001</span>
+                                        </h5>
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-hidden="true"></button>
+
+                                    </div>
+                                    <div class="modal-body p-4">
+                                        <div id="product-id-details-gridjs"></div>
+                                    </div>
+                                </div> <!-- end modal-content-->
+                            </div> <!-- end modal dialog-->
+                        </div>
+                        <!-- end modal-->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+
+        @@include("partials/footer.html")
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+@@include("partials/right-sidebar.html")
+
+@@include("partials/vendor-scripts.html")
+
+<!-- Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="assets/js/axiosConfig.js"></script>
+<!-- gridjs js -->
+<script src="assets/libs/gridjs/gridjs.umd.js"></script>
+
+<script src="assets/js/pages/product-details.js"></script>
+
+<script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

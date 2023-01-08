@@ -1,0 +1,203 @@
+@@include("partials/main.html")
+
+<head>
+    <!-- plugin css -->
+    <link href="assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet">
+
+    <!-- One of the following themes -->
+    <link rel="stylesheet" href="assets/libs/@simonwep/pickr/themes/classic.min.css" /> <!-- 'classic' theme -->
+    <link rel="stylesheet" href="assets/libs/@simonwep/pickr/themes/monolith.min.css" /> <!-- 'monolith' theme -->
+    <link rel="stylesheet" href="assets/libs/@simonwep/pickr/themes/nano.min.css" /> <!-- 'nano' theme -->
+
+    @@include("partials/title-meta.html", {"title": "Basic Elements"})
+
+    @@include("partials/head-css.html")
+
+</head>
+
+@@include("partials/body.html")
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+
+    @@include("partials/menu.html")
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                @@include("partials/page-title.html", {"pagetitle": "Forms", "title": "Basic Elements"})
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header justify-content-between d-flex align-items-center">
+                                <h4 class="card-title">Product Inputs</h4>
+                                <a href="#" class="btn btn-sm btn-soft-secondary">Bulk Upload</a>
+                                <a href="/product-details.html" class="btn btn-sm btn-soft-secondary">Product Details <i
+                                        class="mdi mdi-arrow-right align-middle"></i></a>
+                            </div><!-- end card header -->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-3 row">
+                                            <label for="example-text-input"
+                                                class="col-md-3 col-form-label">Buyer</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="text" placeholder="Artisanal kale"
+                                                    id="example-text-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-search-input"
+                                                class="col-md-3 col-form-label">RAL</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="text" placeholder="RAL"
+                                                    id="example-search-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-email-input"
+                                                class="col-md-3 col-form-label">Color</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="email" placeholder="black"
+                                                    id="example-email-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-email-input" class="col-md-3 col-form-label">Unite
+                                                Price</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="text" placeholder="5665"
+                                                    id="example-email-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-url-input" class="col-md-3 col-form-label">Batch
+                                                No.</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" placeholder="Batch No." type="text"
+                                                    id="example-url-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-tel-input" class="col-md-3 col-form-label">GSM</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="text" placeholder="230+"
+                                                    id="example-tel-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-password-input"
+                                                class="col-md-3 col-form-label">Dia</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="text" placeholder="Dia"
+                                                    id="example-password-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-number-input"
+                                                class="col-md-3 col-form-label">Qty</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="number" value="42"
+                                                    id="example-number-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-number-input1"
+                                                class="col-md-3 col-form-label">Roll</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" id="choices-text-remove-button" type="text"
+                                                    value="EPC-ID 1,EPC-ID 2" />
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-datetime-local-input"
+                                                class="col-md-3 col-form-label">Date and time</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="datetime-local"
+                                                    value="2019-08-19T13:45:00" id="example-datetime-local-input">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-number-input2" class="col-md-3 col-form-label">Factory
+                                                Name</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="text" value="RMG"
+                                                    id="example-number-input2">
+                                            </div>
+                                        </div><!-- end row -->
+                                        <div class="mb-3 row">
+                                            <label for="example-number-input3" class="col-md-3 col-form-label">Challan
+                                                No.</label>
+                                            <div class="col-md-9">
+                                                <input class="form-control" type="text" value="RM-36585895"
+                                                    id="example-number-input3">
+                                            </div>
+                                        </div><!-- end row -->
+
+                                        <div class="mb-3 row">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div><!-- end row -->
+
+
+                                    </div><!-- end col -->
+
+
+
+                                </div><!-- end row -->
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+
+
+            </div> <!-- container-fluid -->
+        </div><!-- End Page-content -->
+
+
+        @@include("partials/footer.html")
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+@@include("partials/right-sidebar.html")
+
+@@include("partials/vendor-scripts.html")
+
+<!-- plugins -->
+<script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+
+<!-- Modern colorpicker bundle -->
+<script src="assets/libs/@simonwep/pickr/pickr.min.js"></script>
+
+<!-- init js -->
+<!-- <script src="assets/js/pages/form-advanced.init.js"></script> -->
+
+<script>
+    // text inputs example
+    var textRemove = new Choices(
+        document.getElementById('choices-text-remove-button'),
+        {
+            delimiter: ',',
+            editItems: true,
+            // maxItemCount: 5,
+            removeItemButton: true,
+        }
+    );
+</script>
+
+<script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
