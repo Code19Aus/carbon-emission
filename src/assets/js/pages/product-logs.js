@@ -14,11 +14,11 @@ axios({
   new gridjs.Grid({
     columns: [
       { id: "productCode", name: "Product Code" },
-      { id: "epcId", name: "Role Code" },
-      { id: "rackId", name: "Rack ID" },
+      { id: "epcId", name: "Item Code" },
+      { id: "rackId", name: "Last Process Code" },
       { id: "floorNo", name: "Location" },
-      { id: "timeBetweenEntryExit", name: "Time Between Entry Exit" },
-      { id: "readingTime", name: "Reading Time" },
+      { id: "timeBetweenEntryExit", name: "Accumulated Carbon" },
+      { id: "readingTime", name: "Last Reading Time" },
     ],
     pagination: {
       limit: 10,
