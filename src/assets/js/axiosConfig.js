@@ -1,5 +1,5 @@
 // axios.defaults.baseURL = "https://api.rmg.code19products.website";
-axios.defaults.baseURL = "https://api.rmg.rezvee.com";
+axios.defaults.baseURL = "https://api.qlytics.xyz";
 axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded";
 
@@ -9,15 +9,33 @@ var path = window.location.pathname.toLocaleLowerCase();
 if (user) {
   axios.defaults.headers.common["Authorization"] = "Bearer " + user.token;
 
-  if (path == "/login.html") {
+  // check if token is expired
+  var date = new Date();
+  var expires = new Date(user?.expires);
+
+  if (date > expires) {
+    Toastify({
+      text: "Your session has expired. Please login again.",
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      },
+    }).showToast();
+
+    userSignOut();
+  }
+
+  if (path == "/choose-user.html" || path == "/login.html") {
     window.location = "/";
   }
-} else if (!user && path != "/login.html") {
-  window.location = "/login.html";
+} else {
+  if (path == "/choose-user.html" || path == "/login.html") {
+  } else {
+    window.location = "/choose-user.html";
+  }
 }
 
-function userSignOut(e) {
-  e.preventDefault();
+function userSignOut() {
   localStorage.removeItem("rmg_product_user");
-  window.location = "/login.html";
+  window.location = "/choose-user.html";
 }

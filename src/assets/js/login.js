@@ -11,6 +11,11 @@ document.querySelector("#btn_sign").addEventListener("click", function (e) {
       })
       .then(function (response) {
         var resUser = response.data.message;
+
+        // add date to logout after 1 hour
+        var date = new Date();
+        date.setHours(date.getHours() + 1);
+        resUser.expires = date;
         localStorage.setItem("rmg_product_user", JSON.stringify(resUser));
         window.location = "/";
       })
