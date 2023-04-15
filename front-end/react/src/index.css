@@ -1,0 +1,46 @@
+:root {
+  --primary-color: 66, 27, 80;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* ------------------------------ GLOBAL STYLES ----------------------------- */
+.text-primary {
+  color: rgba(var(--primary-color), 1);
+}
+.bg-primary {
+  background-color: rgba(var(--primary-color), 1);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------------------------- GLOBAL STYLES END --------------------------- */
+.nav_logo {
+  margin: auto;
+  max-width: 123px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+}
+.nav_logo img {
+  width: 100%;
+}
+/* ------------------------------- SIDEBAR CSS ------------------------------ */
+.main_sidebar .ant-menu-item:has(a.active) {
+  background-color: rgba(var(--primary-color), 1);
+  color: #fff;
+}
+/* ----------------------------- SIDEBAR CSS END ---------------------------- */
