@@ -1,15 +1,13 @@
-# Asset transfer basic sample
-
-The asset transfer basic sample demonstrates:
+# Carbon Emission
 
 - Connecting a client application to a Fabric blockchain network.
 - Submitting smart contract transactions to update ledger state.
 - Evaluating smart contract transactions to query ledger state.
 - Handling errors in transaction invocation.
 
-## About the sample
+## About
 
-This sample includes smart contract and application code in multiple languages. This sample shows create, read, update, transfer and delete of an asset.
+This project includes smart contract and application code in typescript languages. This project shows create, read, update, transfer and delete of an asset.
 
 For a more detailed walk-through of the application code and client API usage, refer to the [Running a Fabric Application tutorial](https://hyperledger-fabric.readthedocs.io/en/latest/write_first_app.html) in the main Hyperledger Fabric documentation.
 
@@ -32,7 +30,7 @@ The smart contract (in folder `chaincode-xyz`) implements the following function
 
 Note that the asset transfer implemented by the smart contract is a simplified scenario, without ownership validation, meant only to demonstrate how to invoke transactions.
 
-## Running the sample
+## Running the project
 
 The Fabric test network is used to deploy and run this sample. Follow these steps in order:
 
