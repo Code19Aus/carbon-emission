@@ -11,7 +11,8 @@ import { errorHandler, notFoundHandler } from './middlewares/common/errorHandler
 
 //ROUTES
 import userRouter from './routes/user.route';
-import assetRouter from './routes/asset.route';
+// import assetRouter from './routes/asset.route';
+import productRouter from './routes/product.route';
 
 
 const PORT = envOrDefault('PORT', '8080');
@@ -25,7 +26,8 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.use("/user", userRouter);
-app.use("/asset", assetRouter);
+// app.use("/asset", assetRouter);
+app.use("/product", productRouter);
 
 // 404 not found handler
 app.use(notFoundHandler);
