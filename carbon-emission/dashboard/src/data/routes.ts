@@ -36,6 +36,12 @@ const routes: Route[] = [
         icon_name: 'ri-computer-line',
         name: 'Projects'
     },
+    {
+        key: 'main_products',
+        path: '/products',
+        icon_name: 'ri-aspect-ratio-line',
+        name: 'Products'
+    },
 ];
 
 
